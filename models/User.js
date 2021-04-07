@@ -8,10 +8,15 @@ const userSchema = mongoose.Schema({
     email: {
         type: String,
         trim: true, //스페이스바를 지워주는 역할
+        // unique: 1
     },
     password: {
         type: String,
-        maxlength: 50
+        minlength: 5
+    },
+    lastname:{
+        type: String,
+        minlength:5
     },
     role: {
         type: Number,
