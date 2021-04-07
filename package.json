@@ -1,0 +1,16 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "이 저장소는 John Ahn 선생님의 유투브 따라하며 배우는 노드, 리액트 시리즈 - 기본 강의 강좌수업을 듣고 실습해본 코드를 저장하는 곳입니다!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ablue",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3"
+  }
+}
