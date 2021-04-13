@@ -19,7 +19,9 @@ mongoose.connect(config.mongoURI, {
 .catch(err => console.log(err))
 
 app.get('/', (req, res) => res.send('Hello World 안녕하세요 반갑습니다'))
-
+app.get('/api/hello', (req, res) =>{
+    res.send("안녕하세요!!!!")
+})
 app.post('/api/users/register', (req,res) => {
     // 회원 가입 할 대 필요한 정보들을 client에서 가져오면
     // 그것들을 데이터베이스에 넣어준다.
@@ -88,11 +90,23 @@ app.get('/api/users/logout', auth, (req, res) =>{
         })
 })
 app.listen(port, () => console.log(`Example app listening on port ${port}`))
-// npm init -> npm install express --save -> npm install mongoose --save -> npm install body-parser --save -> npm install nodemon --save dev -> npm install bcrypt --save
-//-> npm install jsonwebtoken --save -> npm install cookie-parser --save
+// npm init -> npm install express --save -> npm install mongoose --save -> npm install body-parser --save
+
+// npm install nodemon --save dev
 // pacgage.json script 내에 "start": "node index.js",
 // nodemon react의 데브 서버처럼 서버를 내리지 않아도 출력결과에 바로 적용되도록 하는 모듈이다
 // script 내에 "backend" : "nodemon index.js"
+
+// npm install bcrypt --save
 // bcrypt는 데이터를 암호화해주는 모듈이다
+
+// npm i jsonwebtoken --save
 // jsonwebtoken은 토큰을 생성해주는 모듈이다.
+
+// npm i cookie-parser --save
 // cookie-parser은 쿠키에 저장할 수 있게 해주는 모듈이다.
+
+// npm i concurrently --save
+// concurrently은 서버와 클라이언트가 동시에 작동되도록 도와주는 모듈이다.
+// concurrently 링크 참조 : https://www.inflearn.com/course/%EB%94%B0%EB%9D%BC%ED%95%98%EB%A9%B0-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EB%85%B8%EB%93%9C-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EA%B8%B0%EB%B3%B8/lecture/37086?tab=curriculum
+// concurrently는 터미널경로가 루트 서버이여야 한다.
